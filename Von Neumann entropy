@@ -1,0 +1,25 @@
+clear;
+Z=[1,0;0,-1];
+[V1,D1]= eig(Z);
+
+z1=V1(:,1);
+z2=V1(:,2);
+
+psi1 = (kron(z1,z2)+kron(z2,z1))/sqrt(2)
+psi2 = (kron(z1,z2)+kron(z2,z1)+kron(z1,z1))/sqrt(3)
+
+psi1Dagger = conj(psi1')
+psi2Dagger = conj(psi2')
+
+density1=kron(psi1,psi1Dagger)
+density2=kron(psi2,psi2Dagger)
+
+ReducedMatrix1 = [trace(density1(1:2, 1:2)), trace(density1(1:2,3:4));...
+trace(density1(3:4, 1:2)), trace(density1(3:4,3:4))]
+
+ReducedMatrix2 = [trace(density2(1:2, 1:2)), trace(density2(1:2,3:4));...
+trace(density2(3:4, 1:2)), trace(density2(3:4,3:4))]
+
+S1_vn = -trace(ReducedMatrix1*logm (ReducedMatrix1)/log(2))
+
+S2_vn = -trace(ReducedMatrix2*logm (ReducedMatrix2)/log(2))
