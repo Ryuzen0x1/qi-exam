@@ -1,3 +1,5 @@
+% Here "fprintf" is used for print as per the rules of MATLAB. Use "printf" while running in Octave.
+% Here O1 and O3 matrices are given. 
 clear;
 
 O1=[0,1;1,0];
