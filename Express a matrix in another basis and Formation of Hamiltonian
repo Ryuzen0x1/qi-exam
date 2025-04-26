@@ -1,11 +1,13 @@
+% CAUTION: this code needs to be checked. Wait till I make a confirmation. Once the code is checked, this CAUTION statement will be removed.
+
 clear;
 
-B = 1
-c = 0.1
+B = 1                                                        % given constant                                                         
+c = 0.1                                                      % given constant
 
-X = [0, 1; 1, 0]
-Z = [1, 0; 0, -1]
-I = [1, 0; 0, 1]
+X = [0, 1; 1, 0]                                             % sigma_x matrix
+Z = [1, 0; 0, -1]                                            % sigma_z matrix
+I = [1, 0; 0, 1]                                             % identity matrix
 
 [vX, eX] = eig(X)
 [vZ, eZ] = eig(Z)
