@@ -25,12 +25,12 @@ fprintf("Expressing X in the basis of Z\n")
 [conj((vZ(:,1))')*vX(:,1); conj((vZ(:,2))')*vX(:,1)]
 [conj((vZ(:,1))')*vX(:,2); conj((vZ(:,2))')*vX(:,2)]
 
-H1=B*vZ
-H2=B*vZ
+H1=B*Z
+H2=B*Z
 
 H_1=kron(H1,I)+kron(I,H2)
 
-H_2=kron(H1,I)+kron(I,H2)+c*kron(vX,vX)
+H_2=kron(H1,I)+kron(I,H2)+c*kron(X,X)
 
 [v_1,e_1]= eig (H_1)
 [v_2,e_2]= eig (H_2)
