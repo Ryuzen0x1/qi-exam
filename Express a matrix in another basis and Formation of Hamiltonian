@@ -1,4 +1,3 @@
-% CAUTION: this code needs to be checked. Wait till I make a confirmation. Once the code is checked, this CAUTION statement will be removed.
 % Here "fprintf" is used for print as per the rules of MATLAB. Use "printf" while running in Octave.
 
 clear;
